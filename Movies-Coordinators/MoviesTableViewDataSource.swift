@@ -20,7 +20,7 @@ final class MoviesTableViewDataSource: NSObject, UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         let cellViewModel = viewModels[indexPath.row]
-        let cell = tableView.dequeueReusableCell(withIdentifier: "MovieCell")!
+        let cell = UITableViewCell(style: .subtitle, reuseIdentifier: "MovieCell")
         cell.textLabel?.text = cellViewModel.textLabel
         cell.detailTextLabel?.text = cellViewModel.detailTextLabel
         return cell
